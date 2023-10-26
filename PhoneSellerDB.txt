@@ -1,0 +1,54 @@
+CREATE TABLE Brands (
+    ID int NOT NULL IDENTITY(1,1) PRIMARY KEY,
+    BrandName varchar(50),
+);
+CREATE TABLE Customers (
+    ID int NOT NULL IDENTITY(1,1) PRIMARY KEY,
+    CustomerName varchar(50),
+	CreatedAt datetime,
+	DeletedAt datetime,
+	CreatedBy int,
+	FOREIGN KEY (CreatedBy) REFERENCES Users(ID)
+);
+CREATE TABLE Models (
+    ID int NOT NULL IDENTITY(1,1) PRIMARY KEY,
+    BrandID int,
+	ModelName varchar(50),
+	FOREIGN KEY (BrandID) REFERENCES Brands(ID)
+);
+CREATE TABLE Orders (
+    ID int NOT NULL IDENTITY(1,1) PRIMARY KEY,
+	CustomerID int,
+	OrderDate datetime,
+	TotalPrice int,
+	OrderStatus int,
+    OrderDescription varchar(50),
+	FOREIGN KEY (CustomerID) REFERENCES Customers(ID)
+);
+CREATE TABLE Permissions (
+    ID int NOT NULL IDENTITY(1,1) PRIMARY KEY,
+    PermissionName varchar(50),
+);
+CREATE TABLE Users (
+    ID int NOT NULL IDENTITY(1,1) PRIMARY KEY,
+    Username varchar(50),
+	Email varchar(50),
+	Password varchar(255),
+	CreatedAt datetime,
+	DeletedAt datetime,
+);
+CREATE TABLE UserPermissions (
+    ID int NOT NULL IDENTITY(1,1) PRIMARY KEY,
+    UserID int,
+	PermissionID int,
+	FOREIGN KEY (UserID) REFERENCES Users(ID),
+	FOREIGN KEY (PermissionID) REFERENCES Permissions(ID)
+);
+CREATE TABLE ModelVersions (
+    ID int NOT NULL IDENTITY(1,1) PRIMARY KEY,
+    ModelID int,
+	StorageCapacity char(10),
+	Price int,
+	StockStatus int,
+	FOREIGN KEY (ModelID) REFERENCES Models(ID)
+);
