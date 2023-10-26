@@ -21,11 +21,11 @@ Edit the `Server` part in the `ConnectionString` from `appsetting.json`. Then,
 
 Run the following command in Package Manager Console:
 ```console
-    Scaffold-DbContext -Connection Name=DefaultConnection Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models -force
+Scaffold-DbContext -Connection Name=DefaultConnection Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models -force
 ```
 
 ## Run the App
 
 After the app runs, a `localhost/swagger/index.html` similar to the image below will open.
 
-![Swagger Page Example] (https://static1.smartbear.co/swagger/media/images/tools/opensource/swagger_ui.png)
+![Swagger Page Example](https://static1.smartbear.co/swagger/media/images/tools/opensource/swagger_ui.png)
