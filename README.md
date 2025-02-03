@@ -1,6 +1,6 @@
 # PhoneSeller_WebAPI Application
 
-![Swagger](https://camo.githubusercontent.com/96e43701d83561899724a89d71187445b7b8f4fe84518a3ea5bec8f85bd207bf/68747470733a2f2f63646e2e737667706f726e2e636f6d2f6c6f676f732f737761676765722e737667)    ![.NETCore](https://assets-global.website-files.com/6097e0eca1e875de53031ff6/61b810d93fd9cbaf68ba2e4b_net%20core%20logo.png)
+![Swagger](https://miro.medium.com/v2/resize:fit:1400/1*C_u3RtbZnYzRI10IUWbPfg.png)    ![.NETCore](https://assets-global.website-files.com/6097e0eca1e875de53031ff6/61b810d93fd9cbaf68ba2e4b_net%20core%20logo.png)
 
 This application is a basic Swagger-powered application that provides a REST-API to a phone seller.
 
